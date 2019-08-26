@@ -55,7 +55,12 @@ def plot_freqency_histogram(sequence):
     fig.suptitle('RNG Frequency Histogram')
     ax.set_xlabel('Generated value')
     ax.set_ylabel('Frequency')
-    ax.hist(sequence, bins=HISTOGRAM_BINS_COUNT, weights=([1 / RANDOM_SEQUENCE_SIZE] * RANDOM_SEQUENCE_SIZE))
+    ax.hist(
+	sequence,
+	bins=HISTOGRAM_BINS_COUNT,
+	weights=([1 / RANDOM_SEQUENCE_SIZE] * RANDOM_SEQUENCE_SIZE),
+	edgecolor='black',
+	linewidth=0.5)
 
 
 if __name__ == '__main__':
